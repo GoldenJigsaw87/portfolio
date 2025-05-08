@@ -1,0 +1,86 @@
+.Me{
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: "Pixelify Sans", serif;
+    color: #fdfcff;
+    text-shadow: 2px 2px 2px rgb(170, 22, 22);
+    width: 800px; 
+    height: 800px;
+   
+}
+
+ #me{
+   position: fixed;
+    width: 400px;
+    z-index: -1000;
+} 
+
+.Hobbies{
+ /* font-family: Georgia, 'Times New Roman', Times, serif;  */
+ font-family: "Pixelify Sans", serif;
+ font-size: large;
+  color: #fdfcff;
+  background-color: rgb(0, 0, 0);
+}
+
+.About{
+/* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+font-family: "Pixelify Sans", serif;
+font-size: large;
+color: #fdfcff;
+background-color: rgb(0, 0, 0);
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+.Experience{
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: "Pixelify Sans", serif;
+    font-size: large;
+    color: #fdfcff;
+    background-color: rgb(0, 0, 0);
+}
+
+.Goals{
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: "Pixelify Sans", serif;
+    font-size: large;
+    color: #fdfcff;
+    background-color: rgb(0, 0, 0);
+}
+
+.codeProjects{
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: "Pixelify Sans", serif;
+    font-size: large;
+    color: #fdfcff;
+    background-color: rgb(0, 0, 0);
+}
+
+.personalWork{
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: "Pixelify Sans", serif;
+    font-size: large;
+    color: #fdfcff;
+    background-color: rgb(0, 0, 0);
+}
+
+.masterDiv{
+    background-color: black;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 2px #43ff04;
+
+}
+
+p{
+    line-height: 1.8em;
+    max-width: 800px;
+}
+
+.findMe{
+    justify-content: center;
+}
+img{
+    width: 400px;
+}
