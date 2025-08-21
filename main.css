@@ -84,9 +84,45 @@ p{
 img{
     width: 400px;
 }
-.findMe:hover::before{
+.github:hover::before{
   content: ">>";
-  color: limegreen;
-  position: absolute;
-  left: -30px;
+   color: #fdfcff;
+  background-color: black;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 2px #43ff04;
+
+}
+.github:hover::before{
+  content: ">>";
+   color: #fdfcff;
+  background-color: black;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 2px #c40ace;
+
+}
+
+.gitAlt:hover::before{
+  content: ">>";
+   color: #fdfcff;
+  background-color: black;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 2px #c40ace;
+
+}
+
+.linkedin:hover::before{
+  content: ">>";
+   color: #fdfcff;
+  background-color: black;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 2px#c40ace;
+
+}
+
+footer{
+    content: ">>";
+   color: #fdfcff;
+  background-color: black;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 2pxz#43ff04;
 }
