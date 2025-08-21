@@ -84,3 +84,9 @@ p{
 img{
     width: 400px;
 }
+.findMe:hover::before{
+  content: ">>";
+  color: limegreen;
+  position: absolute;
+  left: -30px;
+}
