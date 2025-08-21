@@ -10,8 +10,8 @@
 
  #me{
    position: flex;
-    width: 400px;
-    z-index: -1000;
+    /* width: 400px;
+    z-index: -1000; */
 } 
 
 .Hobbies{
