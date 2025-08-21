@@ -9,7 +9,7 @@
 }
 
  #me{
-   position: fixed;
+   position: flex;
     width: 400px;
     z-index: -1000;
 } 
