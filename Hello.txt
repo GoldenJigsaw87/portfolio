@@ -1,1 +1,7 @@
 3rr0r
+
+
+This is a test file to test the javascripting for future refrencing. In the event you find this file
+then that means it worked perfectly. If it is being read to you then everything went according to code if not 
+then this is all still under construction. All to say that this page is the fun side of the portfolio
+plus it can be used for a accessability feature later on. 

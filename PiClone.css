@@ -1,0 +1,67 @@
+.page{
+  background-color: black;
+}
+
+
+.opener{
+color: limegreen;
+font-family: "Pixelify Sans", serif;
+text-align: center;
+}
+
+.content{
+   
+    text-align: center; 
+   color: limegreen;
+  font-family: "Orbitron", serif;
+  
+}
+
+/* .content:hover::before{
+  content: ">>";
+  color: limegreen;
+  font-family: "Orbitron", serif;
+} */
+
+
+.closer{
+color: red;
+font-family: "Orbitron", serif;
+text-align: center;
+
+}
+
+/* .closer:hover::before{
+  color: red;
+   content: ">>"; 
+}*/
+
+.container{
+  border: 1px solid white;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hover:hover::before{
+  content: ">>";
+  color: limegreen;
+  position: absolute;
+  left: -30px;
+}
+.hover{
+  position: relative;
+  width:fit-content;
+}
+.hovering{
+  position: relative;
+}
+.hovering:hover::before{
+  content: ">>";
+  color: red;
+  position: absolute;
+  left: -30px;
+}
+
+
