@@ -8,13 +8,38 @@ color: limegreen;
 font-family: "Pixelify Sans", serif;
 text-align: center;
 }
-
+a:visited{
+  color: rgb(15, 65, 11);
+  text-decoration: none;
+}
 .content{
    
     text-align: center; 
    color: limegreen;
   font-family: "Orbitron", serif;
+  font-weight: 1.5em;
+  font-style: normal;
+  color: rgb(21, 251, 0);
+  animation: flicker 2s infinite, shake 0.2s infinite;
+  text-shadow:
+    0 0 2px #33c016,
+    0 0 10px #428c2a,
+    0 0 20px #19551f;
   
+  
+}
+.content a{
+   text-align: center; 
+   color: limegreen;
+  font-family: "Orbitron", serif;
+  font-weight: 1.5em;
+  font-style: normal;
+  color: rgb(21, 251, 0);
+  animation: flicker 2s infinite, shake 0.2s infinite;
+  text-shadow:
+    0 0 2px #33c016,
+    0 0 10px #428c2a,
+    0 0 20px #19551f;
 }
 
 /* .content:hover::before{
@@ -61,7 +86,15 @@ text-align: center;
   content: ">>";
   color: red;
   position: absolute;
-  left: -30px;
+  font-weight: 1.5em;
+  font-style: normal;
+  color: rgb(255, 0, 0);
+  animation: flicker 2s infinite, shake 0.2s infinite;
+  text-shadow:
+    0 0 2px #ff0000,
+    0 0 10px #ff0000,
+    0 0 20px #990000;
+  
 }
 
 

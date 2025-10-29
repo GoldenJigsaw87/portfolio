@@ -1,8 +1,16 @@
 .opener{
-    background-color: #720c77;
+    background-color: #48194a;
     font-family: "Pixelify Sans", serif;
      color: #fdfcff;
-    
+}
+a{
+    color: limegreen;
+}
+a:visited{
+    color: red;
+}
+.navigation{
+    text-align: right;
 }
 
 .Me{
@@ -26,6 +34,7 @@
  font-family: "Pixelify Sans", serif;
  font-size: large;
   color: #fdfcff;
+  text-shadow: 2px 2px 2px rgb(170, 22, 22);
   background-color: rgb(0, 0, 0);
 }
 
@@ -35,6 +44,7 @@ font-family: "Pixelify Sans", serif;
 font-size: large;
 color: #fdfcff;
 background-color: rgb(0, 0, 0);
+text-shadow: 2px 2px 2px rgb(170, 22, 22);
 }
 
 body{
@@ -47,6 +57,7 @@ body{
     font-size: large;
     color: #fdfcff;
     background-color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 2px rgb(170, 22, 22);
 }
 
 .Goals{
@@ -55,6 +66,7 @@ body{
     font-size: large;
     color: #fdfcff;
     background-color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 2px rgb(170, 22, 22);
 }
 
 .codeProjects{
@@ -63,6 +75,7 @@ body{
     font-size: large;
     color: #fdfcff;
     background-color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 2px rgb(170, 22, 22);
 }
 
 .personalWork{
@@ -71,6 +84,7 @@ body{
     font-size: large;
     color: #fdfcff;
     background-color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 2px rgb(170, 22, 22);
 }
 
 .masterDiv{
@@ -91,17 +105,10 @@ p{
 img{
     width: 400px;
 }
-.github:hover::before{
-  content: ">>";
-   color: #fdfcff;
-  background-color: black;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 2px #43ff04;
 
-}
 .github:hover::before{
   content: ">>";
-   color: #fdfcff;
+   color: #460db8;
   background-color: black;
     letter-spacing: 2px;
     text-shadow: 2px 2px 2px #c40ace;
@@ -110,7 +117,7 @@ img{
 
 .gitAlt:hover::before{
   content: ">>";
-   color: #fdfcff;
+   color: #460db8;
   background-color: black;
     letter-spacing: 2px;
     text-shadow: 2px 2px 2px #c40ace;
@@ -119,7 +126,7 @@ img{
 
 .linkedin:hover::before{
   content: ">>";
-   color: #fdfcff;
+   color: #460db8;
   background-color: black;
     letter-spacing: 2px;
     text-shadow: 2px 2px 2px#c40ace;
@@ -128,8 +135,19 @@ img{
 
 footer{
     content: ">>";
-   color: #fdfcff;
+   color: #6b04a2;
   background-color: black;
     letter-spacing: 2px;
     text-shadow: 2px 2px 2pxz#43ff04;
+}
+
+.TheList:hover::before{
+  content: ">>";
+  color: rgb(103, 4, 153);
+  position: absolute;
+  left: -30px;
+}
+
+.contentHeading{
+    color: white;
 }
