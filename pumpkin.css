@@ -1,0 +1,57 @@
+body{
+     background-color: black; 
+}
+   
+ 
+ 
+.header{
+object-fit: fill;
+width: 100vw;
+height: 100px;
+top: 50px;
+right: 50px;
+font-family: "Shadows Into Light", cursive;
+  font-weight: 1.5em;
+  font-style: normal;
+  color: rgb(255, 0, 0);
+  animation: flicker 2s infinite, shake 0.2s infinite;
+  text-shadow:
+    0 0 2px #ff0000,
+    0 0 10px #ff0000,
+    0 0 20px #990000;
+ 
+}
+
+.story{
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 1.5em;
+  font-style: normal;
+  color: rgb(255, 255, 255);
+  animation: flicker 2s infinite, shake 0.2s infinite;
+  text-shadow:
+    0 0 2px #ff0000,
+    0 0 10px #ff0000,
+    0 0 20px #990000;
+  
+}
+.story::before,
+.story::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(255, 0, 0, 0.2);
+}
+.story::before {
+    top: -5;
+}
+.story::after {
+    bottom: -5;
+}
+.voice{
+     font-family: "Shadows Into Light", cursive;
+  font-weight: 1.5em;
+  font-style: normal;
+  color: rgb(255, 0, 0);
+}
