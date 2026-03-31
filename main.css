@@ -7,8 +7,6 @@ display: flex;
   background-color: #1e1e1e;
 }
 
-
-
 .opener{
      background-color: #1e1e1e; 
     font-family: "Pixelify Sans", serif;
@@ -18,7 +16,7 @@ display: flex;
     resize: 100px, 100px, 100px, 100px;
 }
 a{
-    color: limegreen;
+    color: #918B13;
 }
 a:visited{
     color: red;
@@ -45,11 +43,15 @@ a:visited{
     height: 800px;
    
 }
+ #me::hover{
+    background-color: #1e1e1e;
+ }
 
  #me{
    position: flex;
      width: 400px;
     z-index: -1000; 
+    
 
  }
 
@@ -232,4 +234,8 @@ footer{
 
     footer{
         background-color: #1e1e1e;
+    }
+
+    .a{
+        padding: 2px, 2px, 2px, 2px;
     }
