@@ -1,90 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MarkJensen</title>
-    <script defer src="main.js"></script>
-    <link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mark Jensen Portfolio</title>
+
+ 
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="terminal.css">
+  <link rel="icon" href="./Images/Jensen Entertainment J.png" type="JensenLogo">
+
+ 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm/css/xterm.css">
+
+ 
+  <script defer src="https://cdn.jsdelivr.net/npm/xterm/lib/xterm.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/xterm-addon-web-links/lib/xterm-addon-web-links.js"></script>
+  <script defer src="terminal.js"></script>
 </head>
-
-<!-- Oh, hello there! If your reading this then your either one of my super amazing instructors or a potential business partner/boss.
- Well I can say that this was a 100% hand crafted website. So here is getting to know me!-->
 <body>
+
+  
+  <header>
     <div class="opener">
-        <h1>Welcome</h1>
-        <div class="navigation">
-        <a href="about.html">About Me</a>
-        <a href="./PiClone.html">Project List</a>
-        </div>
+      <img id="logo" src="Images/Jensen.png" alt="Logo"/>
+      
     </div>
+  </header>
+
+  <main id="mainContent">
     <section class="Me">
-    <h1>Mark Jensen</h1>
-    <div>
-    <img id="me" src="Images/Me.jpg" alt="me"/>
-</div>
-</section>
-<div class="masterDiv">
-    <section class="About">
-       
-</section>
-<section class="Experience">
-<h3>Work Experiences</h3>
-<p>I have a majority of retail experience however I have recently put time into fast food. As someone who tries to chase new things I have found that I had better time in retail but am excited to change that. In terms of school I have experience as the Vice President of the school robotics club and plan to become president next year. As of the start of year 2 I am a student of the 
-    project managment pathway offered by the App Development and Emerging Tech course at Fort Hays Tech Northwest.</p>
-<h3>Code experience</h3>
-<ul class="TheList">
-    <li>Swift</li>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>Javascript</li>
-    <li>Arduino</li>
-    <li>Next App</li>
+      <h1>Mark Jensen</h1>
+      <img id="me" src="Images/Me.jpg" alt="me"/>
+    </section>
+    <div class="navigation">
+        <button><a href="about.html">About Me</a></button>
+       <button><a href="PiClone.html">Projects</a></button>
+      </div>
 
+      <div class="info">
+    <section class="Experience">
+      <h3>Work Experiences</h3>
+      <p>Please note that some experience is school related</p>
+      <ul>
+        <li>2 years retail</li>
+        <li>1.5 years fast food</li>
+        <li>1 year Skills USA</li>
+        <li>Vice President of Robotics Club (first year)</li>
+        <li>President of Robotics Club (second year)</li>
+      </ul>
+    </section>
 
-</ul>
-</section>
-<section class="work">
-    <div class="codeProjects">
-        </div>
-        <h3>Project List</h3>
-        <a href="./PiClone.html" alt="list">Project list</a>
-        <div class="myGallery">
-            <h2>Gallery</h2>
-            <p>Here is a collection of some of my personal favorite projects</p>
-            <img src="../portfolio/Images/golfWebsite.png"  alt="Skills project"/>
-            <p>This was a project I did for skills USA</p>
-        </div>
-        <div  class="findMe">
-            <h2>Find Me</h2>
-            <div class="github">
-            <a href="https://github.com/GoldenJigsaw87">Github</a>
-            </div>
-            <div class="gitAlt">
-            <a href="https://github.com/GoldenJigsaw2">Alternate Github</a>
-            </div>
-            <div class="linkedin">
-            <a href="https://www.linkedin.com/in/mark-jensen-a25426328/">LinkedIn</a>
-             </div>
-
-            <a href=""></a>
-
-            <a href=""></a>
-            
-            
-           
-        
-        </div>
-        </div>
-        
-
-        
-        <footer>
-            <p>© Mark Jensen</p>
-        </footer>
     
-</div>
-</section>
-</section>
+
+    <section class="JensenEntertainment">
+        <h3>Jensen Entertainment</h3>
+        <p>Jensen Entertainment is a small business I have started to build on the side to fuel my passion for robotics and animatronic deign/usage.
+            Right now it is just in the plan phase but I hope to have my revised business plan and prototype website up by summer. Currently I am working 
+            on a prototype animatronic performer as a robotics project and wish to Finish the build by May.
+            <!--finish was capitalized due to an issue with the font -->
+        </p>
+    </section>
+    </div>
+    <section class="FindMe">
+      <h2>Find Me</h2>
+      <div class="github">
+        <a href="https://github.com/GoldenJigsaw87">Github</a>
+      </div>
+      <div class="linkedin">
+       <a href="https://www.linkedin.com/in/mark-jensen-a25426328/">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Terminal Toggle Button -->
+  <button id="terminalButton">>_</button>
+
+  <!-- Terminal Container (hidden by default) -->
+  <div id="terminalContainer" style="display: none;">
+    <div id="terminal"></div>
+    <button id="closeTerminal">Close Terminal</button>
+  </div>
+
+  <footer>
+    <p>© Mark Jensen</p>
+  </footer>
+
 </body>
 </html>

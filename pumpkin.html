@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="pumpkin.css">
     <script defer src="pumpkin.js"></script>
+    <link rel="stylesheet" href="terminal.css">
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/xterm/lib/xterm.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/xterm-addon-web-links/lib/xterm-addon-web-links.js"></script>
+  <script defer src="terminal.js"></script>
     <title>The engineer</title>
 </head>
 <body>
    
+    
+
     <div class="static-effect">
     <div class="header">
+    
     <h1>The engineer</h1>
     <h2>An improv story "With bad web design" By Mark</h2>
     </div>
@@ -67,15 +75,30 @@ still echoes within the machines stored in that house.
 
 </p>
 
-<p>This project is from a website we did as a class where each of us submitted a story of sorts for a big halloween 
+<h3>This project is from a website we did as a class where each of us submitted a story of sorts for a big halloween 
     project. Included is the story that I made for the project as well as my css and javascript files 
-    used to make this project possible. 
-</p>
+    used to make this project possible. This was a project that I take personal joy in because I really enjoyed working on the css 
+    and was happy with choices I made with a Five Nights at Freddy's 4 inspired theme. While the story itself wasn't really my favorite that I made with
+    lack of ideas I still had alot of fun.
+   
+</h3>
 <a href="./index.html">Home</a>
     </div>
    
 </div>
 </div>
 </div>
+ <!-- Terminal Toggle Button -->
+  <button id="terminalButton">>_</button>
+
+  <!-- Terminal Container (hidden by default) -->
+  <div id="terminalContainer" style="display: none;">
+    <div id="terminal"></div>
+    <button id="closeTerminal">Close Terminal</button>
+  </div>
+
+  <footer>
+    <p>© Mark Jensen</p>
+  </footer>
 </body>
 </html>

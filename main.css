@@ -1,7 +1,21 @@
+header{
+display: flex;
+  justify-content: center; 
+  align-items: center;     
+  height: 300px;          
+  border: 1px solid black; 
+  background-color: #1e1e1e;
+}
+
+
+
 .opener{
-    background-color: #48194a;
+     background-color: #1e1e1e; 
     font-family: "Pixelify Sans", serif;
-     color: #fdfcff;
+    color: #fdfcff;
+    align-items: center;
+    justify-content: center;
+    resize: 100px, 100px, 100px, 100px;
 }
 a{
     color: limegreen;
@@ -10,11 +24,20 @@ a:visited{
     color: red;
 }
 .navigation{
-    text-align: right;
+    text-align: center;
+    border: 1px solid rgb(0, 0, 0);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
+#logo{
+    align-items: center;
+}
 .Me{
-    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    
     font-family: "Pixelify Sans", serif;
     color: #fdfcff;
     text-shadow: 2px 2px 2px rgb(170, 22, 22);
@@ -25,12 +48,14 @@ a:visited{
 
  #me{
    position: flex;
-    /* width: 400px;
-    z-index: -1000; */
-} 
+     width: 400px;
+    z-index: -1000; 
+
+ }
 
 .Hobbies{
- /* font-family: Georgia, 'Times New Roman', Times, serif;  */
+ font-family: Georgia, 'Times New Roman', Times, serif;  
+ 
  font-family: "Pixelify Sans", serif;
  font-size: large;
   color: #fdfcff;
@@ -39,7 +64,8 @@ a:visited{
 }
 
 .About{
-/* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+
 font-family: "Pixelify Sans", serif;
 font-size: large;
 color: #fdfcff;
@@ -52,7 +78,8 @@ body{
 }
 
 .Experience{
-    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    
     font-family: "Pixelify Sans", serif;
     font-size: large;
     color: #fdfcff;
@@ -61,16 +88,36 @@ body{
 }
 
 .Goals{
-    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    
     font-family: "Pixelify Sans", serif;
     font-size: large;
     color: #fdfcff;
     background-color: rgb(0, 0, 0);
     text-shadow: 2px 2px 2px rgb(170, 22, 22);
 }
+.JensenEntertainment{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    
+    font-family: "Pixelify Sans", serif;
+    font-size: large;
+    color: #fdfcff;
+    background-color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 2px rgb(170, 22, 22);
+}
+.info{
+     text-align: center;
+    border: 1px solid white;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+    }
 
 .codeProjects{
-    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    
     font-family: "Pixelify Sans", serif;
     font-size: large;
     color: #fdfcff;
@@ -79,7 +126,8 @@ body{
 }
 
 .personalWork{
-    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    
     font-family: "Pixelify Sans", serif;
     font-size: large;
     color: #fdfcff;
@@ -93,6 +141,20 @@ body{
     text-shadow: 2px 2px 2px #43ff04;
 
 }
+.button {
+  background-color: red; 
+   border: none; 
+   color: rgb(0, 0, 0); 
+   padding: 15px 32px; 
+   text-align: center; 
+   text-decoration: none; 
+   display: inline-block; 
+   font-size: 16px; 
+   cursor: pointer; 
+   border-radius: 12px; 
+   border: solid, #c40ace;
+}
+
 
 p{
     line-height: 1.8em;
@@ -101,6 +163,7 @@ p{
 
 .findMe{
     justify-content: center;
+    
 }
 img{
     width: 400px;
@@ -148,6 +211,25 @@ footer{
   left: -30px;
 }
 
-.contentHeading{
-    color: white;
+@media print {
+    .colum {
+        flex-direction: colum;
+    }
 }
+
+
+ body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: black; 
+      font-family: monospace;
+    }
+    #terminal {
+      height: 100%;
+      width: 100%;
+    }
+
+    footer{
+        background-color: #1e1e1e;
+    }

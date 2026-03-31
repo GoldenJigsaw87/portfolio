@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./PiClone.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm/css/xterm.css">
+    <link rel="stylesheet" href="terminal.css">
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/xterm/lib/xterm.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/xterm-addon-web-links/lib/xterm-addon-web-links.js"></script>
+  <script defer src="terminal.js"></script>
     <title>Document</title>
 </head>
 <body class="page">
@@ -13,69 +19,73 @@
     <h2>App Development & Emerrging Technologies</h2>
     <h2>Fort Hays Tech | Northwest</h2> 
     
+
+    <h2>As a project manager I have gotten the privlege to oversee a multitude of projects as well as work on some of my own.
+      Here are some of my most noted projects so far.
+    </h2>
       </div> 
+      <div class="container">
+        <div class="hover">
+      <div class="content">
+       <a href="pumpkin.html">Goodland Touring Revision</a>
+      </div>
+      </div>
+
+      <div class="container">
+        <div class="hover">
+      <div class="content">
+       <a href="pumpkin.html">Topside tipoff</a>
+      </div>
+      </div>
+
+      <div class="container">
+        <div class="hover">
+      <div class="content">
+       <a href="pumpkin.html">My April Fools project</a>
+      </div>
+      </div>
+
+
       <div class="container">
         <div class="hover">
       <div class="content">
        <a href="pumpkin.html">Story Project</a>
       </div>
       </div>
- 
-      <div class="hover">
-      <div class="content">
-      <a href="./Screentime/screentime.html">Screentime Tracker</a>
-      </div>
-      </div>
+
 
       <div class="hover">
       <div class="content">
       <a href="./FHNW_admin_proj/adminProj.html">FHNW Admin Project</a>
       </div>
       </div>
-
-      <div class="hover">
-     <div class="content">
-      <p>demo</p>
-      </div>
-      </div>
-
-      <div class="hover">
-      <div class="content">
-      <p>demo</p>
-      </div>
-      </div>
-
-      <div class="hover">
-      <div class="content">
-      <p>demo</p>
-      </div>
-      </div>
-      
       
       
       <div class="hovering">
       <div class="closer">
-    <h3>My assignments</h3>
+    <a href="about.html"><h3 class="closer">Learn About Me</h3></a>
      </div>
      </div>
      <div class="hovering">
      <div class="closer">
-    <h3>My challenges</h3>
+    <a href="index.html"><h3 class="closer">Go Home</h3></a>
     </div>
     </div>
-    <div class="hovering">
-    <div class="closer">
-    <h3>Final challenges</h3>
-    </div>
-     </div>
-     <div trial>
-     <a href="index.html"><h3>Go Home!!!</h3></a>
-     <a href="about.html"><h3>Learn About Me</h3></a>
-     </div>
-    </div>
-    </div>
+    
+    
   
+ <!-- Terminal Toggle Button -->
+  <button id="terminalButton">>_</button>
 
+  <!-- Terminal Container (hidden by default) -->
+  <div id="terminalContainer" style="display: none;">
+    <div id="terminal"></div>
+    <button id="closeTerminal">Close Terminal</button>
+  </div>
+
+  <footer>
+    <p>© Mark Jensen</p>
+  </footer>
 
 </body>
 </html>
