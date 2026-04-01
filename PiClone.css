@@ -1,103 +1,148 @@
-.page{
+body {
+  margin: 0;
+  padding: 0;
   background-color: black;
+  font-family: "Orbitron", monospace;
+  color: #fdfcff;
 }
 
-
-.opener{
-color: limegreen;
-font-family: "Pixelify Sans", serif;
-text-align: center;
-}
-a:visited{
-  color: rgb(15, 65, 11);
-  text-decoration: none;
-}
-.content{
-   
-    text-align: center; 
-   color: limegreen;
-  font-family: "Orbitron", serif;
-  font-weight: 1.5em;
-  font-style: normal;
-  color: rgb(21, 251, 0);
-  animation: flicker 2s infinite, shake 0.2s infinite;
-  text-shadow:
-    0 0 2px #33c016,
-    0 0 10px #428c2a,
-    0 0 20px #19551f;
-  
-  
-}
-.content a{
-   text-align: center; 
-   color: limegreen;
-  font-family: "Orbitron", serif;
-  font-weight: 1.5em;
-  font-style: normal;
-  color: rgb(21, 251, 0);
-  animation: flicker 2s infinite, shake 0.2s infinite;
-  text-shadow:
-    0 0 2px #33c016,
-    0 0 10px #428c2a,
-    0 0 20px #19551f;
-}
-
-/* .content:hover::before{
-  content: ">>";
+/* HEADER */
+.opener {
   color: limegreen;
-  font-family: "Orbitron", serif;
-} */
-
-
-.closer{
-color: red;
-font-family: "Orbitron", serif;
-text-align: center;
-
+  text-align: center;
+  max-width: 900px;
+  margin: 40px auto;
+  line-height: 1.6;
 }
 
-/* .closer:hover::before{
-  color: red;
-   content: ">>"; 
-}*/
+.opener h1 {
+  font-size: 2.5em;
+  text-shadow: 0 0 8px #33c016;
+}
 
-.container{
-  border: 1px solid white;
-  border-radius: 4px;
+.opener h2 {
+  font-size: 1.2em;
+  font-weight: normal;
+  color: #7CFF5B;
+}
+
+/* GRID */
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 900px;
+  margin: 40px auto;
+  gap: 25px;
+  padding: 0 20px;
+}
+
+/* PANELS */
+.hover {
+  position: relative;
+  background: #0a0a0a;
+  border: 2px solid #1aff00;
+  border-radius: 12px;
+  height: 180px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+
+  box-shadow:
+    inset 0 0 10px rgba(0,255,0,0.15),
+    inset 0 0 2px rgba(0,255,0,0.4);
 }
-.hover:hover::before{
+
+/* PANEL DETAIL LINES */
+.hover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 8px,
+    rgba(0,255,0,0.05) 9px
+  );
+}
+
+/* HOVER EFFECT */
+.hover:hover {
+  transform: translateY(-5px) scale(1.02);
+  border-color: #66ff33;
+  box-shadow:
+    0 0 12px rgba(0,255,0,0.4),
+    inset 0 0 10px rgba(0,255,0,0.2);
+}
+
+/* >> INDICATOR */
+.hover:hover::before {
   content: ">>";
   color: limegreen;
   position: absolute;
-  left: -30px;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.hover{
-  position: relative;
-  width:fit-content;
+
+/* TEXT */
+.content a {
+  color: #21fb00;
+  text-decoration: none;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  text-shadow: 0 0 6px #33c016;
 }
-.hovering{
-  position: relative;
+
+.closer a {
+  color: #ff2b2b;
+  text-decoration: none;
+  font-size: 1.1em;
+  text-shadow: 0 0 6px #ff0000;
 }
-.hovering:hover::before{
-  content: ">>";
-  color: red;
+
+/* PANEL LABEL */
+.hover span {
   position: absolute;
-  font-weight: 1.5em;
-  font-style: normal;
-  color: rgb(255, 0, 0);
-  animation: flicker 2s infinite, shake 0.2s infinite;
-  text-shadow:
-    0 0 2px #ff0000,
-    0 0 10px #ff0000,
-    0 0 20px #990000;
-  
+  bottom: 8px;
+  right: 10px;
+  font-size: 0.7em;
+  color: rgba(0,255,0,0.5);
 }
 
+/* FLICKER ON HOVER ONLY */
+.hover:hover a {
+  animation: flicker 1.5s infinite;
+}
 
-closingAnchor{
-  color: red;
+/* TERMINAL BUTTON */
+#terminalButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: black;
+  color: limegreen;
+  border: 2px solid limegreen;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  color: #1aff00;
+  margin-top: 40px;
+  padding: 20px;
+  border-top: 1px solid #1aff00;
+}
+
+/* ANIMATION */
+@keyframes flicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.85; }
+  100% { opacity: 1; }
 }

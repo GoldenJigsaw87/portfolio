@@ -1,241 +1,175 @@
-header{
-display: flex;
-  justify-content: center; 
-  align-items: center;     
-  height: 300px;          
-  border: 1px solid black; 
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: "Pixelify Sans", monospace;
+  color: #fdfcff;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
   background-color: #1e1e1e;
 }
 
-.opener{
-     background-color: #1e1e1e; 
-    font-family: "Pixelify Sans", serif;
-    color: #fdfcff;
-    align-items: center;
-    justify-content: center;
-    resize: 100px, 100px, 100px, 100px;
+#logo {
+  width: 200px;
 }
-a{
-    color: #918B13;
-}
-a:visited{
-    color: red;
-}
-.navigation{
-    text-align: center;
-    border: 1px solid rgb(0, 0, 0);
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#logo{
-    align-items: center;
-}
-.Me{
-     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-    
-    font-family: "Pixelify Sans", serif;
-    color: #fdfcff;
-    text-shadow: 2px 2px 2px rgb(170, 22, 22);
-    width: 800px; 
-    height: 800px;
-   
-}
- #me::hover{
-    background-color: #1e1e1e;
- }
 
- #me{
-   position: flex;
-     width: 400px;
-    z-index: -1000; 
-    
-
- }
-
-.Hobbies{
- font-family: Georgia, 'Times New Roman', Times, serif;  
- 
- font-family: "Pixelify Sans", serif;
- font-size: large;
-  color: #fdfcff;
+/* NAME */
+.myName {
+  text-align: center;
+  font-size: 3em;
   text-shadow: 2px 2px 2px rgb(170, 22, 22);
-  background-color: rgb(0, 0, 0);
 }
 
-.About{
- font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-
-font-family: "Pixelify Sans", serif;
-font-size: large;
-color: #fdfcff;
-background-color: rgb(0, 0, 0);
-text-shadow: 2px 2px 2px rgb(170, 22, 22);
-}
-
-body{
-    background-color: rgb(0, 0, 0);
-}
-
-.Experience{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-    
-    font-family: "Pixelify Sans", serif;
-    font-size: large;
-    color: #fdfcff;
-    background-color: rgb(0, 0, 0);
-    text-shadow: 2px 2px 2px rgb(170, 22, 22);
-}
-
-.Goals{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-    
-    font-family: "Pixelify Sans", serif;
-    font-size: large;
-    color: #fdfcff;
-    background-color: rgb(0, 0, 0);
-    text-shadow: 2px 2px 2px rgb(170, 22, 22);
-}
-.JensenEntertainment{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-    
-    font-family: "Pixelify Sans", serif;
-    font-size: large;
-    color: #fdfcff;
-    background-color: rgb(0, 0, 0);
-    text-shadow: 2px 2px 2px rgb(170, 22, 22);
-}
-.info{
-     text-align: center;
-    border: 1px solid white;
-  border-radius: 4px;
+/* ME SECTION */
+.Mee {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
-    }
-
-.codeProjects{
-     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-    
-    font-family: "Pixelify Sans", serif;
-    font-size: large;
-    color: #fdfcff;
-    background-color: rgb(0, 0, 0);
-    text-shadow: 2px 2px 2px rgb(170, 22, 22);
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-.personalWork{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-    
-    font-family: "Pixelify Sans", serif;
-    font-size: large;
-    color: #fdfcff;
-    background-color: rgb(0, 0, 0);
-    text-shadow: 2px 2px 2px rgb(170, 22, 22);
+#me {
+  width: 220px;
+  border-radius: 12px;
+  border: 2px solid white;
 }
 
-.masterDiv{
-    background-color: black;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 2px #43ff04;
-
-}
-.button {
-  background-color: red; 
-   border: none; 
-   color: rgb(0, 0, 0); 
-   padding: 15px 32px; 
-   text-align: center; 
-   text-decoration: none; 
-   display: inline-block; 
-   font-size: 16px; 
-   cursor: pointer; 
-   border-radius: 12px; 
-   border: solid, #c40ace;
-}
-
-
-p{
-    line-height: 1.8em;
-    max-width: 800px;
-}
-
-.findMe{
-    justify-content: center;
-    
-}
-img{
-    width: 400px;
-}
-
-.github:hover::before{
-  content: ">>";
-   color: #460db8;
+.Me {
+  max-width: 600px;
   background-color: black;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 2px #c40ace;
-
+  padding: 20px;
+  border: 1px solid white;
+  border-radius: 10px;
+  line-height: 1.6;
+  font-size: 1.1em;
 }
 
-.gitAlt:hover::before{
-  content: ">>";
-   color: #460db8;
+/* NAVIGATION BUTTONS (IMPROVED) */
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.navigation a {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: #2d00cc;           /* slightly darker for contrast */
+  color: #ffffff;                      /* better readability */
+  border-radius: 999px;                /* fully rounded (pill buttons) */
+  border: 2px solid #6a00ff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+}
+
+/* HOVER */
+.navigation a:hover {
+  background-color: #4a1aff;
+  transform: translateY(-2px);
+}
+
+/* ACTIVE (click feedback) */
+.navigation a:active {
+  transform: translateY(0);
+  background-color: #220099;
+}
+
+/* KEYBOARD ACCESSIBILITY */
+.navigation a:focus {
+  outline: 3px solid #a201f9;
+  outline-offset: 3px;
+}
+
+/* INFO CARDS */
+.info {
+  display: flex;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.info section {
+  flex: 1;
+  min-width: 280px;
   background-color: black;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 2px #c40ace;
-
+  padding: 20px;
+  border: 1px solid white;
+  border-radius: 12px;
 }
 
-.linkedin:hover::before{
-  content: ">>";
-   color: #460db8;
-  background-color: black;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 2px#c40ace;
-
+/* TEXT */
+p {
+  line-height: 1.8em;
 }
 
-footer{
-    content: ">>";
-   color: #6b04a2;
-  background-color: black;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 2pxz#43ff04;
+/* FIND ME */
+.FindMe {
+  text-align: center;
+  margin-top: 40px;
 }
 
-.TheList:hover::before{
-  content: ">>";
-  color: rgb(103, 4, 153);
-  position: absolute;
-  left: -30px;
+.FindMe a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 22px;
+  background-color: #7a00cc;
+  color: white;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
 }
 
-@media print {
-    .colum {
-        flex-direction: colum;
-    }
+.FindMe a:hover {
+  background-color: #a201f9;
 }
 
+.FindMe a:focus {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
 
- body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background-color: black; 
-      font-family: monospace;
-    }
-    #terminal {
-      height: 100%;
-      width: 100%;
-    }
+/* FOOTER */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #1e1e1e;
+  text-align: center;
+  color: #a201f9;
+}
 
-    footer{
-        background-color: #1e1e1e;
-    }
+/* TERMINAL */
+#terminal {
+  height: 100%;
+  width: 100%;
+}
 
-    .a{
-        padding: 2px, 2px, 2px, 2px;
-    }
+/* IMAGE DEFAULT */
+img {
+  max-width: 100%;
+}
+
+/* LINKS */
+a {
+  color: #b3a800; /* slightly brighter for readability */
+}
+
+a:visited {
+  color: #ff4d4d;
+}

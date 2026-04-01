@@ -1,4 +1,3 @@
-// Initialize Xterm.js terminal
 const term = new Terminal({
   cols: 80,
   rows: 10,
@@ -9,79 +8,93 @@ const term = new Terminal({
   }
 });
 
-// Attach terminal to container
 term.open(document.getElementById('terminal'));
 
-// Load linkifier addon (makes URLs clickable)
 const webLinksAddon = new WebLinksAddon.WebLinksAddon();
 term.loadAddon(webLinksAddon);
 
-// Toggle terminal button
 const terminalButton = document.getElementById('terminalButton');
 const terminalContainer = document.getElementById('terminalContainer');
 const closeButton = document.getElementById('closeTerminal');
 
 terminalButton.addEventListener('click', () => {
-  terminalContainer.style.display = 'flex'; // show terminal
+  terminalContainer.style.display = 'flex';
 });
 
 closeButton.addEventListener('click', () => {
-  terminalContainer.style.display = 'none'; // hide terminal
+  terminalContainer.style.display = 'none';
 });
 
-// Terminal commands
+/* COMMANDS */
 const commands = {
   help: () => {
     term.writeln("Commands:");
     term.writeln("main      - Go to homepage");
     term.writeln("resume    - Open resume");
-    term.writeln("contact   - Open contact page");
-    term.writeln("color     - Change terminal & page text color");
-    term.writeln("clear     - Clear terminal text");
+    term.writeln("explain   - Explain sections");
+    term.writeln("clear     - Clear terminal");
     prompt();
   },
+
+  explain: () => {
+    term.writeln("Type one of the following:");
+    term.writeln("about");
+    term.writeln("projects");
+    term.writeln("client_projects");
+    term.writeln("jensen_entertainment");
+    prompt();
+  },
+
+  about: () => {
+    term.writeln("The about page was built as a learn-about-me without distracting from the main project. It is simple, clean, and focused on readability so visitors can quickly understand my background and interests.");
+    prompt();
+  },
+
+  projects: () => {
+    term.writeln("This page is inspired by the maintenance panel from Five Nights at Freddy's 3. It showcases fun projects in a unique, themed way while still being functional.");
+    prompt();
+  },
+
+  client_projects: () => {
+    term.writeln("Due to confidentiality, these projects are summarized. Work includes an admissions scheduling system, Topside Tipoff support, and Goodland Touring—a visitor information website.");
+    prompt();
+  },
+
+  jensen_entertainment: () => {
+    term.writeln("Jensen Entertainment is a business project built around my passion for robotics and animatronics, with plans for future expansion and development.");
+    prompt();
+  },
+
   main: () => {
     term.writeln("Returning to homepage...");
-    window.location.href = "index.html"; // navigate
+    window.location.href = "index.html";
   },
+
   resume: () => {
     term.writeln("Opening resume...");
-    // Open PDF in a new tab
     window.open("JensenResume.pdf", "_blank");
-},
-  contact: () => {
-    term.writeln("Opening contact page...");
-    window.location.href = "contact.html"; // contact page
-  },
-  color: (args) => {
-    // args example: "color red"
-    const color = args[1] || "#00FF00"; // default green
-    term.setOption("theme", { background: '#000000', foreground: color });
-    document.documentElement.style.setProperty('--text-color', color); // update CSS variable
-    document.body.style.color = color; // also update body text color
-    term.writeln(`Text color changed to ${color}`);
     prompt();
   },
+
   clear: () => {
     term.clear();
     prompt();
   }
 };
 
-// Simple input handling
+/* INPUT SYSTEM */
 function prompt() {
-  term.write("\n> "); // prompt
+  term.write("\n> ");
   let userInput = '';
 
-  // onKey listener (backspace, enter, regular keys)
   const keyHandler = (e) => {
     const key = e.key;
 
-    if (key === '\r') { // Enter pressed
+    if (key === '\r') {
       term.writeln("");
       handleCommand(userInput.trim());
       userInput = '';
-    } else if (key === '\u007F') { // Backspace
+    } else if (key === '\u007F') {
       if (userInput.length > 0) {
         userInput = userInput.slice(0, -1);
         term.write("\b \b");
@@ -95,25 +108,24 @@ function prompt() {
   term.onKey(keyHandler);
 }
 
-// Parse and execute commands
+/* COMMAND HANDLER */
 function handleCommand(input) {
   if (!input) {
     prompt();
     return;
   }
 
-  const parts = input.split(' '); // split command + args
-  const cmd = parts[0].toLowerCase();
+  const cmd = input.toLowerCase();
 
   if (commands[cmd]) {
-    commands[cmd](parts); // pass args to function
+    commands[cmd]();
   } else {
     term.writeln(`Unknown command: ${input}`);
     prompt();
   }
 }
 
-// Initial welcome + prompt
+/* START */
 term.writeln("Welcome to Portfolio Terminal!");
 term.writeln("Type 'help' for commands.");
 prompt();

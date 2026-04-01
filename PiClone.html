@@ -1,83 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./PiClone.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm/css/xterm.css">
-    <link rel="stylesheet" href="terminal.css">
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+
+  <link rel="stylesheet" href="PiClone.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm/css/xterm.css">
   <script defer src="https://cdn.jsdelivr.net/npm/xterm/lib/xterm.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/xterm-addon-web-links/lib/xterm-addon-web-links.js"></script>
   <script defer src="terminal.js"></script>
-    <title>Document</title>
 </head>
+
 <body class="page">
-     <div>
-      <div class="opener">
+
+  <div class="opener">
     <h1>Mark Jensen</h1>
-    <h2>App Development & Emerrging Technologies</h2>
-    <h2>Fort Hays Tech | Northwest</h2> 
-    
-
-    <h2>As a project manager I have gotten the privlege to oversee a multitude of projects as well as work on some of my own.
-      Here are some of my most noted projects so far.
+    <h2>App Development & Emerging Technologies</h2>
+    <h2>Fort Hays Tech | Northwest</h2>
+    <h2>
+      As a project manager I have gotten the privilege to oversee a multitude of projects 
+      as well as work on some of my own. Here are some of my most noted fun personal projects so far.
     </h2>
-      </div> 
-      <div class="container">
-        <div class="hover">
+  </div>
+
+  <!-- CLEAN GRID -->
+  <div class="container">
+
+    <div class="hover">
       <div class="content">
-       <a href="pumpkin.html">Goodland Touring Revision</a>
+        <a href="foolsday.html">My April Fools Project</a>
+        <span>SYS_01</span>
       </div>
-      </div>
+    </div>
 
-      <div class="container">
-        <div class="hover">
+    <div class="hover">
       <div class="content">
-       <a href="pumpkin.html">Topside tipoff</a>
+        <a href="pumpkin.html">Story Project</a>
+        <span>SYS_02</span>
       </div>
-      </div>
+    </div>
 
-      <div class="container">
-        <div class="hover">
-      <div class="content">
-       <a href="pumpkin.html">My April Fools project</a>
-      </div>
-      </div>
-
-
-      <div class="container">
-        <div class="hover">
-      <div class="content">
-       <a href="pumpkin.html">Story Project</a>
-      </div>
-      </div>
-
-
-      <div class="hover">
-      <div class="content">
-      <a href="./FHNW_admin_proj/adminProj.html">FHNW Admin Project</a>
-      </div>
-      </div>
-      
-      
-      <div class="hovering">
+    <div class="hover">
       <div class="closer">
-    <a href="about.html"><h3 class="closer">Learn About Me</h3></a>
-     </div>
-     </div>
-     <div class="hovering">
-     <div class="closer">
-    <a href="index.html"><h3 class="closer">Go Home</h3></a>
+        <a href="about.html">Learn About Me</a>
+        <span>NAV_01</span>
+      </div>
     </div>
+
+    <div class="hover">
+      <div class="closer">
+        <a href="index.html">Go Home</a>
+        <span>NAV_02</span>
+      </div>
     </div>
-    
-    
-  
- <!-- Terminal Toggle Button -->
+
+  </div>
+
+  <!-- TERMINAL -->
   <button id="terminalButton">>_</button>
 
-  <!-- Terminal Container (hidden by default) -->
   <div id="terminalContainer" style="display: none;">
     <div id="terminal"></div>
     <button id="closeTerminal">Close Terminal</button>
