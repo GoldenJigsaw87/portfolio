@@ -36,10 +36,33 @@ const commands = {
     term.writeln("main      - Go to homepage");
     term.writeln("resume    - Open resume");
     term.writeln("contact   - Open contact page");
-    term.writeln("color     - Change terminal & page text color");
-    term.writeln("clear     - Clear terminal text");
+   term.writeln("explain    -explaination of the current project");
     prompt();
   },
+  explain: () => {
+    term.writeln("Which page would you like an in depth explaination of?");
+    term.writeln("About    - Learn more about me");
+    term.writeln("Projects    - See my projects");
+    term.writeln("Client_Projects   - Learn about work I have done for clients");
+    term.writeln("Jensen_Entertainment   - Learn about my entertainment projects");
+    prompt();
+  },
+About: () => {
+    term.writeln("The about page was built as a learn about me without trying to take away from the main project itself. It is a simple page with a picture of me and some text about my background and interests. I wanted to keep it simple and straightforward, so that visitors can quickly learn about me without having to navigate through a lot of information. The page is designed to be  easy to read and not super cluttered, with a clean layout and a focus on the content.");
+    prompt();
+  },
+Projects: () => {
+term.writeln("I wanted to use some of the fun projects I have done to make this page inspired by the maintnence pannel from Five Nights at Freddy's 3. I thought it would be fun to link these ones in so that I can give a quick showcase.")
+},
+
+Client_Projects: () => {
+term.writeln("Once upon a time I would have wanted to display some of my projects for you to see, but because of confidentiality I figured it would be best typed out in a brief explaination. I have managed an admissions project for the local college. The goal was a schedualing system for admin representatives to visit other schools. I have helped for Topside Tipoff which is a local basketball tournament that. Finally I helped manage Goodland Touring which is a website to help visitors find places in Goodland, Kansas to visit while they are in the area.");
+},
+
+Jensen_Entertainment: () => {
+term.writeln("Jensen Entertainment is a business I have been starting to create based on my love of business and animatronics")
+},
+
   main: () => {
     term.writeln("Returning to homepage...");
     window.location.href = "index.html"; // navigate
@@ -53,15 +76,15 @@ const commands = {
     term.writeln("Opening contact page...");
     window.location.href = "contact.html"; // contact page
   },
-  color: (args) => {
+//   color: (args) => {
     // args example: "color red"
-    const color = args[1] || "#00FF00"; // default green
-    term.setOption("theme", { background: '#000000', foreground: color });
-    document.documentElement.style.setProperty('--text-color', color); // update CSS variable
-    document.body.style.color = color; // also update body text color
-    term.writeln(`Text color changed to ${color}`);
-    prompt();
-  },
+    // const color = args[1] || "#00FF00"; // default green
+    // term.setOption("theme", { background: '#000000', foreground: color });
+    // document.documentElement.style.setProperty('--text-color', color); // update CSS variable
+    // document.body.style.color = color; // also update body text color
+    // term.writeln(`Text color changed to ${color}`);
+    // prompt();
+//   },
   clear: () => {
     term.clear();
     prompt();
@@ -117,3 +140,4 @@ function handleCommand(input) {
 term.writeln("Welcome to Portfolio Terminal!");
 term.writeln("Type 'help' for commands.");
 prompt();
+
