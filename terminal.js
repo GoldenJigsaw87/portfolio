@@ -1,4 +1,3 @@
-// Initialize Xterm.js terminal
 const term = new Terminal({
   cols: 80,
   rows: 10,
@@ -9,102 +8,93 @@ const term = new Terminal({
   }
 });
 
-// Attach terminal to container
 term.open(document.getElementById('terminal'));
 
-// Load linkifier addon (makes URLs clickable)
 const webLinksAddon = new WebLinksAddon.WebLinksAddon();
 term.loadAddon(webLinksAddon);
 
-// Toggle terminal button
 const terminalButton = document.getElementById('terminalButton');
 const terminalContainer = document.getElementById('terminalContainer');
 const closeButton = document.getElementById('closeTerminal');
 
 terminalButton.addEventListener('click', () => {
-  terminalContainer.style.display = 'flex'; // show terminal
+  terminalContainer.style.display = 'flex';
 });
 
 closeButton.addEventListener('click', () => {
-  terminalContainer.style.display = 'none'; // hide terminal
+  terminalContainer.style.display = 'none';
 });
 
-// Terminal commands
+/* COMMANDS */
 const commands = {
   help: () => {
     term.writeln("Commands:");
     term.writeln("main      - Go to homepage");
     term.writeln("resume    - Open resume");
-    term.writeln("contact   - Open contact page");
-   term.writeln("explain    -explaination of the current project");
+    term.writeln("explain   - Explain sections");
+    term.writeln("clear     - Clear terminal");
     prompt();
   },
+
   explain: () => {
-    term.writeln("Which page would you like an in depth explaination of?");
-    term.writeln("About    - Learn more about me");
-    term.writeln("Projects    - See my projects");
-    term.writeln("Client_Projects   - Learn about work I have done for clients");
-    term.writeln("Jensen_Entertainment   - Learn about my entertainment projects");
+    term.writeln("Type one of the following:");
+    term.writeln("about");
+    term.writeln("projects");
+    term.writeln("client_projects");
+    term.writeln("jensen_entertainment");
     prompt();
   },
-About: () => {
-    term.writeln("The about page was built as a learn about me without trying to take away from the main project itself. It is a simple page with a picture of me and some text about my background and interests. I wanted to keep it simple and straightforward, so that visitors can quickly learn about me without having to navigate through a lot of information. The page is designed to be  easy to read and not super cluttered, with a clean layout and a focus on the content.");
+
+  about: () => {
+    term.writeln("The about page was built as a learn-about-me without distracting from the main project. It is simple, clean, and focused on readability so visitors can quickly understand my background and interests.");
     prompt();
   },
-Projects: () => {
-term.writeln("I wanted to use some of the fun projects I have done to make this page inspired by the maintnence pannel from Five Nights at Freddy's 3. I thought it would be fun to link these ones in so that I can give a quick showcase.")
-},
 
-Client_Projects: () => {
-term.writeln("Once upon a time I would have wanted to display some of my projects for you to see, but because of confidentiality I figured it would be best typed out in a brief explaination. I have managed an admissions project for the local college. The goal was a schedualing system for admin representatives to visit other schools. I have helped for Topside Tipoff which is a local basketball tournament that. Finally I helped manage Goodland Touring which is a website to help visitors find places in Goodland, Kansas to visit while they are in the area.");
-},
+  projects: () => {
+    term.writeln("This page is inspired by the maintenance panel from Five Nights at Freddy's 3. It showcases fun projects in a unique, themed way while still being functional.");
+    prompt();
+  },
 
-Jensen_Entertainment: () => {
-term.writeln("Jensen Entertainment is a business I have been starting to create based on my love of business and animatronics")
-},
+  client_projects: () => {
+    term.writeln("Due to confidentiality, these projects are summarized. Work includes an admissions scheduling system, Topside Tipoff support, and Goodland Touring—a visitor information website.");
+    prompt();
+  },
+
+  jensen_entertainment: () => {
+    term.writeln("Jensen Entertainment is a business project built around my passion for robotics and animatronics, with plans for future expansion and development.");
+    prompt();
+  },
 
   main: () => {
     term.writeln("Returning to homepage...");
-    window.location.href = "index.html"; // navigate
+    window.location.href = "index.html";
   },
+
   resume: () => {
     term.writeln("Opening resume...");
-    // Open PDF in a new tab
     window.open("JensenResume.pdf", "_blank");
-},
-  contact: () => {
-    term.writeln("Opening contact page...");
-    window.location.href = "contact.html"; // contact page
+    prompt();
   },
-//   color: (args) => {
-    // args example: "color red"
-    // const color = args[1] || "#00FF00"; // default green
-    // term.setOption("theme", { background: '#000000', foreground: color });
-    // document.documentElement.style.setProperty('--text-color', color); // update CSS variable
-    // document.body.style.color = color; // also update body text color
-    // term.writeln(`Text color changed to ${color}`);
-    // prompt();
-//   },
+
   clear: () => {
     term.clear();
     prompt();
   }
 };
 
-// Simple input handling
+/* INPUT SYSTEM */
 function prompt() {
-  term.write("\n> "); // prompt
+  term.write("\n> ");
   let userInput = '';
 
-  // onKey listener (backspace, enter, regular keys)
   const keyHandler = (e) => {
     const key = e.key;
 
-    if (key === '\r') { // Enter pressed
+    if (key === '\r') {
       term.writeln("");
       handleCommand(userInput.trim());
       userInput = '';
-    } else if (key === '\u007F') { // Backspace
+    } else if (key === '\u007F') {
       if (userInput.length > 0) {
         userInput = userInput.slice(0, -1);
         term.write("\b \b");
@@ -118,26 +108,24 @@ function prompt() {
   term.onKey(keyHandler);
 }
 
-// Parse and execute commands
+/* COMMAND HANDLER */
 function handleCommand(input) {
   if (!input) {
     prompt();
     return;
   }
 
-  const parts = input.split(' '); // split command + args
-  const cmd = parts[0].toLowerCase();
+  const cmd = input.toLowerCase();
 
   if (commands[cmd]) {
-    commands[cmd](parts); // pass args to function
+    commands[cmd]();
   } else {
     term.writeln(`Unknown command: ${input}`);
     prompt();
   }
 }
 
-// Initial welcome + prompt
+/* START */
 term.writeln("Welcome to Portfolio Terminal!");
 term.writeln("Type 'help' for commands.");
 prompt();
-
